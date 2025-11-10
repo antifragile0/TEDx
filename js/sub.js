@@ -5,11 +5,21 @@
 // Configuration
 const CONFIG = {
   // === PERUBAHAN 1: URL diubah ke file lokal ===
-  proxyListUrl: "ProxyList.txt",
+  proxyListUrl: "https://raw.githubusercontent.com/AFRcloud/ProxyList/refs/heads/main/ProxyList.txt",
   apiCheckUrl: "https://api.jb8fd7grgd.workers.dev",
   mainDomains: [
-    "afrcloud.fun"
-  ],
+          "antiquewhite.qzz.io",
+          "bisque.qzz.io",
+          "cornsilk.qzz.io",
+          "floralwhite.qzz.io",
+          "fuchsia.qzz.io",
+          "ivory.qzz.io",
+          "lavenderblush.qzz.io",
+          "midnightblue.qzz.io",
+          "sandybrown.qzz.io",
+          "seashell.qzz.io",
+          "thistle.qzz.io"
+],  
   maxProxies: 50,
   defaultProxyCount: 5,
   pathTemplate: "/{ip}:{port}"
