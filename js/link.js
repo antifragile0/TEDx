@@ -15,8 +15,19 @@ function generateRandomUUID() {
 
 // Configuration
 const serverDomains = [
-  "afrcloud.fun"
+  "antiquewhite.qzz.io",
+  "bisque.qzz.io",
+  "cornsilk.qzz.io",
+  "floralwhite.qzz.io",
+  "fuchsia.qzz.io",
+  "ivory.qzz.io",
+  "lavenderblush.qzz.io",
+  "midnightblue.qzz.io",
+  "sandybrown.qzz.io",
+  "seashell.qzz.io",
+  "thistle.qzz.io"
 ];
+
 const API_STATUS_URL = "https://api.jb8fd7grgd.workers.dev";
 let selectedServerDomain = serverDomains[0] // Default to first domain
 const defaultUUID = generateRandomUUID()
