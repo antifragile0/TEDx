@@ -8,17 +8,11 @@
             proxyListUrl: "https://raw.githubusercontent.com/AFRcloud/ProxyList/refs/heads/main/ProxyList.txt",
             apiCheckUrl: "https://api.jb8fd7grgd.workers.dev",
             mainDomains: [
-                "antiquewhite.qzz.io",
-                "bisque.qzz.io",
-                "cornsilk.qzz.io",
-                "floralwhite.qzz.io",
-                "fuchsia.qzz.io",
-                "ivory.qzz.io",
-                "lavenderblush.qzz.io",
-                "midnightblue.qzz.io",
-                "sandybrown.qzz.io",
-                "seashell.qzz.io",
-                "thistle.qzz.io"
+                "silence.xwrx.dpdns.org",
+                "nautica.cfw.qzz.io",
+                "nautica.sntx.dpdns.org",
+                "nautica.anti.dpdns.org",
+                "tedx.dpdns.org"
             ],
             maxProxies: 50,
             defaultProxyCount: 5,
