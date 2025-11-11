@@ -26,17 +26,11 @@
 
         // --- Configuration & Initialization ---
         const serverDomains = [
-            "antiquewhite.qzz.io",
-            "bisque.qzz.io",
-            "cornsilk.qzz.io",
-            "floralwhite.qzz.io",
-            "fuchsia.qzz.io",
-            "ivory.qzz.io",
-            "lavenderblush.qzz.io",
-            "midnightblue.qzz.io",
-            "sandybrown.qzz.io",
-            "seashell.qzz.io",
-            "thistle.qzz.io"
+            "silence.xwrx.dpdns.org",
+            "nautica.cfw.qzz.io",
+            "nautica.sntx.dpdns.org",
+            "nautica.anti.dpdns.org",
+            "tedx.dpdns.org"
         ];
         
         // ** MODIFIKASI INTI: Pilih domain acak saat inisialisasi **
