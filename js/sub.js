@@ -613,19 +613,19 @@ proxies:\n`
                             const name = `[${proxyIndex * bugs.length + bugIndex + 1}] ${proxy.country} - ${proxy.provider} [Trojan-${useTls ? "TLS" : "NTLS"}]`
 
                             config += `
- - name: "${name}"
-   type: trojan
-   server: ${server}
-   port: ${port}
-   password: ${uuid}
-   udp: false
-   sni: ${sni}
-   skip-cert-verify: true
-   network: ws
-   ws-opts:
-     path: ${path}
-     headers:
-       Host: ${host}
+- name: "${name}"
+  type: trojan
+  server: ${server}
+  port: ${port}
+  password: ${uuid}
+  udp: false
+  sni: ${sni}
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: ${path}
+    headers:
+      Host: ${host}
 `
                         })
                     } else {
@@ -633,19 +633,19 @@ proxies:\n`
                         const name = `[${proxyIndex + 1}] ${proxy.country} - ${proxy.provider} [Trojan-${useTls ? "TLS" : "NTLS"}]`
 
                         config += `
- - name: "${name}"
-   type: trojan
-   server: ${mainDomain}
-   port: ${port}
-   password: ${uuid}
-   udp: false
-   sni: ${mainDomain}
-   skip-cert-verify: true
-   network: ws
-   ws-opts:
-     path: ${path}
-     headers:
-       Host: ${mainDomain}
+- name: "${name}"
+  type: trojan
+  server: ${mainDomain}
+  port: ${port}
+  password: ${uuid}
+  udp: false
+  sni: ${mainDomain}
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: ${path}
+    headers:
+      Host: ${mainDomain}
 `
                     }
                 }
@@ -660,20 +660,20 @@ proxies:\n`
                             const name = `[${proxyIndex * bugs.length + bugIndex + 1}] ${proxy.country} - ${proxy.provider} [VLESS-${useTls ? "TLS" : "NTLS"}]`
 
                             config += `
- - name: "${name}"
-   type: vless
-   server: ${server}
-   port: ${port}
-   uuid: ${uuid}
-   udp: false
-   tls: ${tls}
-   skip-cert-verify: true
-   servername: ${sni}
-   network: ws
-   ws-opts:
-     path: ${path}
-     headers:
-       Host: ${host}
+- name: "${name}"
+  type: vless
+  server: ${server}
+  port: ${port}
+  uuid: ${uuid}
+  udp: false
+  tls: ${tls}
+  skip-cert-verify: true
+  servername: ${sni}
+  network: ws
+  ws-opts:
+    path: ${path}
+    headers:
+      Host: ${host}
 `
                         })
                     } else {
@@ -681,20 +681,20 @@ proxies:\n`
                         const name = `[${proxyIndex + 1}] ${proxy.country} - ${proxy.provider} [VLESS-${useTls ? "TLS" : "NTLS"}]`
 
                         config += `
- - name: "${name}"
-   type: vless
-   server: ${mainDomain}
-   port: ${port}
-   uuid: ${uuid}
-   udp: false
-   tls: ${tls}
-   skip-cert-verify: true
-   servername: ${mainDomain}
-   network: ws
-   ws-opts:
-     path: ${path}
-     headers:
-       Host: ${mainDomain}
+- name: "${name}"
+  type: vless
+  server: ${mainDomain}
+  port: ${port}
+  uuid: ${uuid}
+  udp: false
+  tls: ${tls}
+  skip-cert-verify: true
+  servername: ${mainDomain}
+  network: ws
+  ws-opts:
+    path: ${path}
+    headers:
+      Host: ${mainDomain}
 `
                     }
                 }
@@ -708,21 +708,21 @@ proxies:\n`
                             const name = `[${proxyIndex * bugs.length + bugIndex + 1}] ${proxy.country} - ${proxy.provider} [SS-${useTls ? "TLS" : "NTLS"}]`
 
                             config += `
- - name: "${name}"
-   type: ss
-   server: ${server}
-   port: ${port}
-   cipher: none
-   password: ${uuid}
-   udp: false
-   plugin: v2ray-plugin
-   plugin-opts:
-     mode: websocket
-     tls: ${tls}
-     skip-cert-verify: true
-     host: ${host}
-     path: ${path}
-     mux: false
+- name: "${name}"
+  type: ss
+  server: ${server}
+  port: ${port}
+  cipher: none
+  password: ${uuid}
+  udp: false
+  plugin: v2ray-plugin
+  plugin-opts:
+    mode: websocket
+    tls: ${tls}
+    skip-cert-verify: true
+    host: ${host}
+    path: ${path}
+    mux: false
 `
                         })
                     } else {
@@ -730,21 +730,21 @@ proxies:\n`
                         const name = `[${proxyIndex + 1}] ${proxy.country} - ${proxy.provider} [SS-${useTls ? "TLS" : "NTLS"}]`
 
                         config += `
- - name: "${name}"
-   type: ss
-   server: ${mainDomain}
-   port: ${port}
-   cipher: none
-   password: ${uuid}
-   udp: false
-   plugin: v2ray-plugin
-   plugin-opts:
-     mode: websocket
-     tls: ${tls}
-     skip-cert-verify: true
-     host: ${mainDomain}
-     path: ${path}
-     mux: false
+- name: "${name}"
+  type: ss
+  server: ${mainDomain}
+  port: ${port}
+  cipher: none
+  password: ${uuid}
+  udp: false
+  plugin: v2ray-plugin
+  plugin-opts:
+    mode: websocket
+    tls: ${tls}
+    skip-cert-verify: true
+    host: ${mainDomain}
+    path: ${path}
+    mux: false
 `
                     }
                 }
