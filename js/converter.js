@@ -562,40 +562,40 @@
         parsedLinks.forEach((link, index) => {
           config += "\n"
           if (link.type === "vmess") {
-            config += `  - name: "[${index + 1}]-${link.name}"\n    type: vmess\n    server: ${link.server}\n    port: ${link.port}\n    uuid: ${link.uuid}\n    alterId: ${link.alterId || 0}\n    cipher: ${link.cipher || "auto"}\n    udp: true\n    tls: ${link.tls}\n    skip-cert-verify: ${link.skipCertVerify || true}\n`
+            config += `- name: "[${index + 1}]-${link.name}"\n  type: vmess\n  server: ${link.server}\n  port: ${link.port}\n  uuid: ${link.uuid}\n  alterId: ${link.alterId || 0}\n  cipher: ${link.cipher || "auto"}\n  udp: true\n  tls: ${link.tls}\n  skip-cert-verify: ${link.skipCertVerify || true}\n`
             if (link.network === "ws") {
-              config += `    network: ws\n    ws-opts:\n      path: ${link.wsPath || ""}\n`
+              config += `  network: ws\n  ws-opts:\n    path: ${link.wsPath || ""}\n`
               if (link.wsHost) {
-                config += `      headers:\n        Host: ${link.wsHost}\n`
+                config += `    headers:\n      Host: ${link.wsHost}\n`
               }
             }
             if (link.tls && link.sni) {
-              config += `    servername: ${link.sni}\n`
+              config += `  servername: ${link.sni}\n`
             }
           } else if (link.type === "vless") {
-            config += `  - name: "[${index + 1}]-${link.name}"\n    type: vless\n    server: ${link.server}\n    port: ${link.port}\n    uuid: ${link.uuid}\n    udp: true\n    tls: ${link.tls}\n    skip-cert-verify: ${link.skipCertVerify || true}\n`
+            config += `- name: "[${index + 1}]-${link.name}"\n  type: vless\n  server: ${link.server}\n  port: ${link.port}\n  uuid: ${link.uuid}\n  udp: true\n  tls: ${link.tls}\n  skip-cert-verify: ${link.skipCertVerify || true}\n`
             if (link.network === "ws") {
-              config += `    network: ws\n    ws-opts:\n      path: ${link.wsPath || ""}\n`
+              config += `  network: ws\n  ws-opts:\n    path: ${link.wsPath || ""}\n`
               if (link.wsHost) {
-                config += `      headers:\n        Host: ${link.wsHost}\n`
+                config += `    headers:\n      Host: ${link.wsHost}\n`
               }
             }
             if (link.tls && link.sni) {
-              config += `    servername: ${link.sni}\n`
+              config += `  servername: ${link.sni}\n`
             }
           } else if (link.type === "trojan") {
-            config += `  - name: "[${index + 1}]-${link.name}"\n    type: trojan\n    server: ${link.server}\n    port: ${link.port}\n    password: ${link.password}\n    udp: true\n    skip-cert-verify: ${link.skipCertVerify || true}\n`
+            config += `- name: "[${index + 1}]-${link.name}"\n  type: trojan\n  server: ${link.server}\n  port: ${link.port}\n  password: ${link.password}\n  udp: true\n  skip-cert-verify: ${link.skipCertVerify || true}\n`
             if (link.network === "ws") {
-              config += `    network: ws\n    ws-opts:\n      path: ${link.wsPath || ""}\n`
+              config += `  network: ws\n  ws-opts:\n    path: ${link.wsPath || ""}\n`
               if (link.wsHost) {
-                config += `      headers:\n        Host: ${link.wsHost}\n`
+                config += `    headers:\n      Host: ${link.wsHost}\n`
               }
             }
             if (link.sni) {
-              config += `    sni: ${link.sni}\n`
+              config += `  sni: ${link.sni}\n`
             }
           } else if (link.type === "ss") {
-            config += `  - name: "[${index + 1}]-${link.name}"\n    server: ${link.server}\n    port: ${link.port}\n    type: ss\n    cipher: ${link.cipher || "none"}\n    password: ${link.password}\n    plugin: v2ray-plugin\n    client-fingerprint: chrome\n    udp: false\n    plugin-opts:\n      mode: websocket\n      host: ${link.wsHost || link.server}\n      path: ${link.wsPath || ""}\n      tls: ${link.tls}\n      mux: false\n      skip-cert-verify: true\n    headers:\n      custom: value\n      ip-version: dual\n      v2ray-http-upgrade: false\n      v2ray-http-upgrade-fast-open: false\n`
+            config += `- name: "[${index + 1}]-${link.name}"\n  server: ${link.server}\n  port: ${link.port}\n  type: ss\n  cipher: ${link.cipher || "none"}\n  password: ${link.password}\n  plugin: v2ray-plugin\n  client-fingerprint: chrome\n  udp: false\n  plugin-opts:\n    mode: websocket\n    host: ${link.wsHost || link.server}\n    path: ${link.wsPath || ""}\n    tls: ${link.tls}\n    mux: false\n    skip-cert-verify: true\n  headers:\n    custom: value\n    ip-version: dual\n    v2ray-http-upgrade: false\n    v2ray-http-upgrade-fast-open: false\n`
           }
         })
 
